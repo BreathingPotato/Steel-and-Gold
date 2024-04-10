@@ -8,7 +8,7 @@ public class Order : ScriptableObject
     [SerializeField]
     public string orderName;
     public string OrderName
-    { get { return OrderName; } set { orderName = value; } }
+    { get { return orderName; } set { orderName = value; } }
 
     // Whatever you need for the order mini games go in here.
 

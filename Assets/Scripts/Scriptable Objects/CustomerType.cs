@@ -6,9 +6,9 @@ using UnityEngine;
 public class CustomerType : ScriptableObject
 {
     [SerializeField]
-    public string customerName;
+    private string customerName;
     public string CustomerName
-    { get { return CustomerName; } set { customerName = value; } }
+    { get { return customerName; } set { customerName = value; } }
 
     // Whatever you need for the order mini games go in here.
 

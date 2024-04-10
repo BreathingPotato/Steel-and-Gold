@@ -24,7 +24,7 @@ public class OrderManager : MonoBehaviour
         summonedCustomer = customerOrder[randomCustomerNumber];
         requestedItem = itemOrder[randomOrderNumber];
 
-        Debug.Log(summonedCustomer.customerName + " wants " + requestedItem.orderName);
+        Debug.Log(summonedCustomer.CustomerName + " wants " + requestedItem.OrderName);
 
      //   Random number -> List -> Scriptable Object -> Name 
     }
