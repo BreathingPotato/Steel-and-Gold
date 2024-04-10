@@ -16,6 +16,10 @@ public class ForgeMinigames : MonoBehaviour
     public GameObject smelteryUi;
     public GameObject offButton;
 
+    public GameObject smelteryMinigamePrefab;
+    public GameObject smithingMinigamePrefab;
+
+
     public void OnTriggerEnter2D(Collider2D other)
     {
             triggerActive = true;
@@ -25,10 +29,12 @@ public class ForgeMinigames : MonoBehaviour
     {
             triggerActive = false;
     }
+
     private void Update()
     {
         if (triggerActive && Input.GetKeyDown(KeyCode.Space))
         {
+            PlayerMovement.instance.performingAction = true;
             if( forgeStation == true)
             {
                 OpenForge();
@@ -50,29 +56,33 @@ public class ForgeMinigames : MonoBehaviour
 
     public void OpenForge()
     {
-        offButton.gameObject.SetActive(true);
-        forgeUi.gameObject.SetActive(true);
+        //offButton.gameObject.SetActive(true);
+        //forgeUi.gameObject.SetActive(true);
         Debug.Log("OpenForge");
     }
 
     public void OpenAnvil()
     {
-        offButton.gameObject.SetActive(true);
-        anvilUi.gameObject.SetActive(true);
+        //offButton.gameObject.SetActive(true);
+        //anvilUi.gameObject.SetActive(true);
+        StationManager.instance.LoadMinigame(smithingMinigamePrefab);
+        StartCoroutine(StationManager.instance.SmithingMinigameInit());
         Debug.Log("OpenAnvil");
     }
 
     public void OpenGrindstone()
     {
-        offButton.gameObject.SetActive(true);
-        grindstoneUi.gameObject.SetActive(true);
+        //offButton.gameObject.SetActive(true);
+        //grindstoneUi.gameObject.SetActive(true);
         Debug.Log("OpenGrindstone");
     }
 
     public void OpenSmeltery()
     {
-        offButton.gameObject.SetActive(true);
-        smelteryUi.gameObject.SetActive(true);
+        //offButton.gameObject.SetActive(true);
+        //smelteryUi.gameObject.SetActive(true);
+        StationManager.instance.LoadMinigame(smelteryMinigamePrefab);
+        StartCoroutine(StationManager.instance.SmelteryMinigameInit());
         Debug.Log("OpenSmeltery");
     }
 }

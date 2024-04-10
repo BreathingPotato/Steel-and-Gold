@@ -15,3 +15,17 @@ MonoBehaviour:
   materialName: Chadinium
   materialValue: 2
   materialPower: 5
+  materialHardness: 20
+  heatLevels:
+  - maxHeat: 80
+    minHeat: 75
+    qualityModifier: 20
+  - maxHeat: 85
+    minHeat: 70
+    qualityModifier: 10
+  - maxHeat: 95
+    minHeat: 60
+    qualityModifier: 0
+  - maxHeat: 100
+    minHeat: 0
+    qualityModifier: -10
