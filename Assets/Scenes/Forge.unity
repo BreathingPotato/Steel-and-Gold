@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 44227873}
   - component: {fileID: 44227877}
   m_Layer: 0
-  m_Name: Circle
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -599,7 +599,7 @@ GameObject:
   - component: {fileID: 490277371}
   - component: {fileID: 490277372}
   m_Layer: 0
-  m_Name: Station 4
+  m_Name: Smeltery Station
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -739,6 +739,56 @@ MonoBehaviour:
   grindstoneUi: {fileID: 650572507}
   smelteryUi: {fileID: 94611617}
   offButton: {fileID: 758778766}
+  smelteryMinigamePrefab: {fileID: 1198714343216162538, guid: fdd2284decc625944abb7ddc43a0ce7e, type: 3}
+  smithingMinigamePrefab: {fileID: 2277358062903919200, guid: ea7162b5608cbc6458988d276595d4e4, type: 3}
+--- !u!1 &602892128
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 602892130}
+  - component: {fileID: 602892129}
+  m_Layer: 0
+  m_Name: DataSaver
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &602892129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 602892128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cb5c37e79795c645b89891885bcc612, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forgeItem:
+    material: {fileID: 0}
+    weaponType: 
+    quality: 0
+--- !u!4 &602892130
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 602892128}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.5292414, y: 0.32918787, z: -0.9620461}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &650572507
 GameObject:
   m_ObjectHideFlags: 0
@@ -868,7 +918,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &758778767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1407,7 +1457,7 @@ GameObject:
   - component: {fileID: 1145791262}
   - component: {fileID: 1145791263}
   m_Layer: 0
-  m_Name: Station 2
+  m_Name: Anvil Station
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1547,6 +1597,8 @@ MonoBehaviour:
   grindstoneUi: {fileID: 650572507}
   smelteryUi: {fileID: 94611617}
   offButton: {fileID: 758778766}
+  smelteryMinigamePrefab: {fileID: 1198714343216162538, guid: fdd2284decc625944abb7ddc43a0ce7e, type: 3}
+  smithingMinigamePrefab: {fileID: 2277358062903919200, guid: ea7162b5608cbc6458988d276595d4e4, type: 3}
 --- !u!1 &1179375673
 GameObject:
   m_ObjectHideFlags: 0
@@ -1804,6 +1856,54 @@ Transform:
   - {fileID: 490277369}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1675085847
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1675085849}
+  - component: {fileID: 1675085848}
+  m_Layer: 0
+  m_Name: StationManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1675085848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675085847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b5a2ead80fa5cc4a909340a6b3cfc6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forgeItem:
+    material: {fileID: 11400000, guid: af1b0aa773e0e1747a6b6ad583a9f3ba, type: 2}
+    weaponType: Sword
+    quality: 0
+--- !u!4 &1675085849
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675085847}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.26205516, y: 0.12426809, z: -0.99285865}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1842826801
 GameObject:
   m_ObjectHideFlags: 0
@@ -1817,7 +1917,7 @@ GameObject:
   - component: {fileID: 1842826804}
   - component: {fileID: 1842826805}
   m_Layer: 0
-  m_Name: Station 3
+  m_Name: Grindstone Station
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1957,6 +2057,8 @@ MonoBehaviour:
   grindstoneUi: {fileID: 650572507}
   smelteryUi: {fileID: 94611617}
   offButton: {fileID: 758778766}
+  smelteryMinigamePrefab: {fileID: 1198714343216162538, guid: fdd2284decc625944abb7ddc43a0ce7e, type: 3}
+  smithingMinigamePrefab: {fileID: 2277358062903919200, guid: ea7162b5608cbc6458988d276595d4e4, type: 3}
 --- !u!1 &1928157946
 GameObject:
   m_ObjectHideFlags: 0
@@ -2038,7 +2140,7 @@ GameObject:
   - component: {fileID: 2069065042}
   - component: {fileID: 2069065043}
   m_Layer: 0
-  m_Name: Station 1
+  m_Name: Forge Station
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2178,6 +2280,8 @@ MonoBehaviour:
   grindstoneUi: {fileID: 650572507}
   smelteryUi: {fileID: 94611617}
   offButton: {fileID: 758778766}
+  smelteryMinigamePrefab: {fileID: 1198714343216162538, guid: fdd2284decc625944abb7ddc43a0ce7e, type: 3}
+  smithingMinigamePrefab: {fileID: 2277358062903919200, guid: ea7162b5608cbc6458988d276595d4e4, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -2188,3 +2292,5 @@ SceneRoots:
   - {fileID: 1571570045}
   - {fileID: 965762463}
   - {fileID: 1928157949}
+  - {fileID: 1675085849}
+  - {fileID: 602892130}

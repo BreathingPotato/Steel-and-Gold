@@ -11,16 +11,25 @@ public class MaterialQuality : ScriptableObject
     private float materialValue;
     [SerializeField]
     private float materialPower;
-    
-    public float MaterialPower    
-    { get { return materialPower; } set { materialPower = value; } }
-    
+    [SerializeField]
+    private int materialHardness;
+    [SerializeField]
+    private List<HeatLevel> heatLevels;
+
+    public string MaterialName
+    { get { return materialName; } }
+
     public float MaterialValue
-    { get { return materialValue; } set { materialValue = value; } }
+    { get { return materialValue; } }
+
+    public float MaterialPower    
+    { get { return materialPower; } }
     
-public string MaterialName
-    { get { return materialName; } set { materialName = value; } }
+    public int MaterialHardness 
+    { get { return materialHardness; } }
+
+    public List<HeatLevel> HeatLevels 
+    { get { return heatLevels; } }
 
     // Whatever you need for the order mini games go in here.
-
 }

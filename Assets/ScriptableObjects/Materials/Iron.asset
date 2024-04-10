@@ -15,3 +15,17 @@ MonoBehaviour:
   materialName: Iron
   materialValue: 1
   materialPower: 1.5
+  materialHardness: 10
+  heatLevels:
+  - maxHeat: 70
+    minHeat: 60
+    qualityModifier: 20
+  - maxHeat: 80
+    minHeat: 50
+    qualityModifier: 10
+  - maxHeat: 90
+    minHeat: 40
+    qualityModifier: 0
+  - maxHeat: 100
+    minHeat: 0
+    qualityModifier: -10

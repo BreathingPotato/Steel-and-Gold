@@ -55,13 +55,11 @@ public class Bellow : MonoBehaviour
 
     public void HandleGrab() 
     {
-        Debug.Log("Grab");
         isHeld = true;
     }
 
     public void HandleRelease() 
     {
-        Debug.Log("Release");
         isHeld = false;
     }
 }

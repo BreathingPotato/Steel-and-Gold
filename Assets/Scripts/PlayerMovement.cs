@@ -13,10 +13,11 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-        if (instance != null)
+        if (instance == null)
         {
             instance = this;
         }
+
         rb = GetComponent<Rigidbody2D>();
     }
 

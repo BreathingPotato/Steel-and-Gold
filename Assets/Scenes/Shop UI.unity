@@ -1080,10 +1080,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   progressAmount: 0
   progressAmountInt: 0
+  progressMax: 500
   result: 0
   progressBar: {fileID: 143445095}
   numberDisplay: {fileID: 260367616}
   orderManager: {fileID: 434298605}
+  forgeItems:
+  - material: {fileID: 11400000, guid: af1b0aa773e0e1747a6b6ad583a9f3ba, type: 2}
+    weaponType: Bow
+    quality: 100
 --- !u!4 &597832054
 Transform:
   m_ObjectHideFlags: 0

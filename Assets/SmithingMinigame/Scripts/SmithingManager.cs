@@ -5,6 +5,10 @@ using UnityEngine.UI;
 
 public class SmithingManager : MonoBehaviour
 {
+    public ForgeItem forgeItem;
+
+    public static SmithingManager instance;
+
     public GameObject targetPrefab;
     public Canvas mainCanvas;
     public Image spawnArea;
@@ -22,12 +26,27 @@ public class SmithingManager : MonoBehaviour
 
     public bool isCompleted;
 
-    public float quality = 1;
-    public float qualityDecay = 0.1f;
+    public float quality = 0;
+    public float qualityGain = 10f;
+    public float qualityDecay = 10f;
+
+    private bool initialized = false;
 
     // Start is called before the first frame update
-    void Start()
+    void Start() 
     {
+        instance = this;
+        Debug.Log("awake");
+    }
+
+    public void Initialize(ForgeItem forgeItem)
+    {
+        Debug.Log("init");
+        this.forgeItem = forgeItem;
+
+        quality = forgeItem.quality;
+        targetAmount = forgeItem.material.MaterialHardness;
+
         targetColor = bladeBase.color;
         bladeBase.color = startingColor;
 
@@ -35,10 +54,14 @@ public class SmithingManager : MonoBehaviour
         pointerEvent.OnClick.AddListener(delegate { OnMiss(); });
 
         SpawnTargets();
+
+        initialized = true;
     }
 
     private void Update()
     {
+        if (!initialized)
+            return;
 
         // Temporary reset code
         if (Input.GetKeyDown(KeyCode.R)) 
@@ -50,8 +73,12 @@ public class SmithingManager : MonoBehaviour
             SpawnTargets();
         }
 
-        if (targetsHit >= targetAmount)
+        if (targetsHit >= targetAmount) 
+        {
+            forgeItem.quality += quality;
+            Debug.Log($"Material: {forgeItem.material.MaterialName}, Final power is now {forgeItem.Power()}");
             isCompleted = true;
+        }
     }
 
     private void DeleteTargets() 
@@ -107,6 +134,7 @@ public class SmithingManager : MonoBehaviour
     private void OnHit(Image target) 
     {
         // Add target hit count
+        quality += qualityGain;
         targetsHit++;
         targets.Remove(target);
         Destroy(target.gameObject);
