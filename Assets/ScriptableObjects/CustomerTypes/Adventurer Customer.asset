@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Adventurer Customer
   m_EditorClassIdentifier: 
   customerName: Adventurer
+  customerIcon: {fileID: 5755095091179365998, guid: 08971d095aaf8a24a9c4edd4f1c347c9, type: 3}

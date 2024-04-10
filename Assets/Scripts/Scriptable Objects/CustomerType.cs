@@ -7,8 +7,14 @@ public class CustomerType : ScriptableObject
 {
     [SerializeField]
     private string customerName;
+
+    [SerializeField]
+    private GameObject customerIcon;
     public string CustomerName
     { get { return customerName; } set { customerName = value; } }
+
+    public GameObject CustomerIcon
+    { get { return customerIcon; } set { customerIcon = value; } }
 
     // Whatever you need for the order mini games go in here.
 

@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Mercenary Customer
   m_EditorClassIdentifier: 
   customerName: Mercenary
+  customerIcon: {fileID: 5755095091179365998, guid: 197168b34f141bf46b78614d04ba8474, type: 3}

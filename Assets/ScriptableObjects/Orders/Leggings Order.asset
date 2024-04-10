@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Leggings Order
   m_EditorClassIdentifier: 
   orderName: Leggings
+  itemIcon: {fileID: 2677111637244646730, guid: e36ad811b1b923f40aa5128ff87dd44c, type: 3}

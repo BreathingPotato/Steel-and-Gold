@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Bow Order
   m_EditorClassIdentifier: 
   orderName: Bow
+  itemIcon: {fileID: 5086822518641893857, guid: 40464ead3f1bd994b84e82ad3e00bf7d, type: 3}

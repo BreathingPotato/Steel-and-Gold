@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Comissioner Customer
   m_EditorClassIdentifier: 
   customerName: Comissioner
+  customerIcon: {fileID: 5755095091179365998, guid: 4b479dabeb1dc1c4aa0e20e348b33594, type: 3}

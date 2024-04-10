@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Helmet Order
   m_EditorClassIdentifier: 
   orderName: Helmet
+  itemIcon: {fileID: 8977058326411708275, guid: 1cdc167fd9e17cd479da7d7173b8f2c7, type: 3}

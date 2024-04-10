@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Chestplate Order
   m_EditorClassIdentifier: 
   orderName: Chestplate
+  itemIcon: {fileID: 275234987721730719, guid: 09c9ac7f708033345b479d1c6eb3022f, type: 3}

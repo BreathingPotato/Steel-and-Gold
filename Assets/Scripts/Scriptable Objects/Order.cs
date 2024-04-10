@@ -6,9 +6,14 @@ using UnityEngine;
 public class Order : ScriptableObject
 {
     [SerializeField]
-    public string orderName;
+    private string orderName;
+    [SerializeField]
+    private GameObject itemIcon;
     public string OrderName
     { get { return orderName; } set { orderName = value; } }
+
+    public GameObject ItemIcon
+    { get { return itemIcon; } set { itemIcon = value; } }
 
     // Whatever you need for the order mini games go in here.
 

@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Armguard Order
   m_EditorClassIdentifier: 
   orderName: Armguard
+  itemIcon: {fileID: 7532329436782527316, guid: 4cd4ebb7222ab44469990a8e237d8b2f, type: 3}
